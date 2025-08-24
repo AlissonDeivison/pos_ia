@@ -1,0 +1,50 @@
+Estratégias e Algoritmos de Busca
+Os algoritmos de busca são o "motor" que a IA utiliza para navegar pelo espaço de busca e encontrar uma solução para um problema. Eles se dividem em duas categorias principais: Busca Não Informada e Busca Informada.
+
+1. Busca Não Informada (Busca Cega)
+Esses algoritmos exploram o espaço de busca de maneira sistemática, sem qualquer informação adicional sobre a localização do estado objetivo. Eles não sabem se um estado está "mais perto" ou "mais longe" da solução; apenas seguem as regras de exploração.
+
+Busca Aleatória:
+
+Como funciona: Os próximos estados (nós) a serem explorados são escolhidos de forma completamente aleatória a partir dos estados disponíveis.
+
+Característica: É simples, mas muito ineficiente e não garante encontrar a melhor solução, nem mesmo uma solução.
+
+Busca em Largura (Breadth-First Search - BFS):
+
+Como funciona: A busca explora o espaço em camadas. Começa no estado inicial, depois visita todos os seus "vizinhos" diretos. Em seguida, visita todos os vizinhos dos vizinhos, e assim por diante.
+
+Analogia: É como procurar alguém em um prédio verificando andar por andar, sala por sala, antes de subir para o próximo andar. Garante que você encontre o caminho mais curto em termos de número de passos.
+
+Busca em Profundidade (Depth-First Search - DFS):
+
+Como funciona: A busca avança o mais fundo possível por um único caminho (ramo). Apenas quando chega a um ponto sem saída ou ao final do ramo, ela retrocede (backtracking) e tenta o próximo caminho disponível.
+
+Analogia: É como tentar sair de um labirinto seguindo sempre em frente e virando à direita em cada bifurcação. Se você bate em uma parede, você volta ao último cruzamento e tenta o próximo caminho.
+
+2. Busca Informada (Busca Heurística)
+Esses algoritmos são mais inteligentes. Eles utilizam uma função de avaliação (heurística) que estima quão promissor um estado é, ou seja, quão "próximo" ele parece estar do estado objetivo. Isso permite que a busca seja muito mais eficiente.
+
+Busca Gulosa pela Melhor Escolha (Greedy Best-First Search):
+
+Como funciona: O algoritmo sempre escolhe expandir o nó que parece estar mais perto do objetivo, de acordo com a estimativa da função heurística.
+
+Característica: É "guloso" porque toma a decisão que parece melhor no momento, ignorando os custos passados. Pode encontrar uma solução rapidamente, mas não garante que seja a melhor (a de menor custo total).
+
+Busca de Custo Uniforme (Uniform-Cost Search):
+
+Como funciona: Uma variação da busca em largura, mas em vez de expandir o nó menos profundo, ele expande o nó com o menor custo acumulado desde o estado inicial.
+
+Característica: Garante encontrar a solução de menor custo total, mas pode explorar muitos caminhos caros antes de encontrar o caminho ideal se não tiver uma "direção" para o objetivo.
+
+Busca A (A-Estrela):*
+
+Como funciona: É considerado o algoritmo de busca mais completo e eficiente, pois combina o melhor das duas abordagens anteriores. Para decidir qual nó expandir, ele considera:
+
+O custo real acumulado do estado inicial até o nó atual (g(n)).
+
+Uma estimativa heurística do custo do nó atual até o estado objetivo (h(n)).
+
+Fórmula de Avaliação: f(n) = g(n) + h(n)
+
+Característica: A* encontra o caminho de menor custo de forma muito mais eficiente que a Busca de Custo Uniforme, pois a heurística "guia" a busca na direção correta.

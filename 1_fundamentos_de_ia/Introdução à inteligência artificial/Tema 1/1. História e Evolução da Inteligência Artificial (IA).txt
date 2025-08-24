@@ -1,0 +1,49 @@
+TEMA 01 - FUNDAMENTOS DE INTELIGÊNCIA ARTIFICIAL
+História e Evolução da Inteligência Artificial (IA)
+A Inteligência Artificial (IA) é um campo interdisciplinar da ciência da computação cujo objetivo é desenvolver máquinas capazes de simular a inteligência humana. Isso inclui a capacidade de aprender com a experiência, adaptar-se a novas informações e realizar tarefas que normalmente exigiriam raciocínio humano. Uma subárea fundamental da IA é o Aprendizado de Máquina (Machine Learning - ML), que se baseia na ideia de que os sistemas podem aprender a partir de dados históricos para identificar padrões e tomar decisões com mínima intervenção humana.
+
+Marcos Históricos:
+
+1956 - O Nascimento da IA: O termo "Inteligência Artificial" foi cunhado por John McCarthy em uma conferência em Dartmouth. Os primeiros trabalhos focavam em programação lógica e jogos estratégicos, como o xadrez, utilizando abordagens baseadas em regras, como: "se a condição X for atendida, então execute a ação Y".
+
+1970 a 1980 - O "Inverno" da IA: Este período foi marcado por uma redução no financiamento e no interesse pela área. Os sistemas da época eram limitados em sua capacidade de processamento e memória, o que restringia a complexidade dos problemas que podiam resolver.
+
+1990 - O Renascimento da IA: O avanço significativo no poder computacional e o crescente volume de dados disponíveis, impulsionados pela popularização da internet, permitiram o ressurgimento da IA. Técnicas como Machine Learning (ML) e Redes Neurais Artificiais (RNAs) ganharam força. A disponibilidade de grandes conjuntos de dados (texto, imagens, áudio) tornou-se crucial, pois quanto mais exemplos classificados um modelo recebe, melhor se torna seu treinamento.
+
+2000 a 2010 - A Expansão da IA: A era das grandes empresas de tecnologia e redes sociais, como o Facebook (com seu banco de dados Cassandra), gerou uma quantidade massiva de dados. A IA passou a ser usada para análise de sentimentos, personalização de feeds e sistemas de recomendação, com o objetivo de engajar os usuários.
+
+2020 - A Era da IA Generativa e Onipresente: A década atual é caracterizada pela proliferação de aplicações avançadas de IA, como carros autônomos, assistentes virtuais, análise de dados complexos, Processamento de Linguagem Natural (PLN) avançado e, notavelmente, as IAs Generativas, capazes de criar novos conteúdos.
+
+Fatores que Impulsionaram a Evolução da IA:
+
+Aumento da capacidade de processamento (hardware mais potente).
+
+Aumento do volume e da variedade dos conjuntos de dados (Big Data).
+
+Aumento da complexidade e eficiência dos algoritmos.
+
+Evolução dos Algoritmos e Subáreas da IA
+1950-1960: Foco em regras e lógica simbólica.
+
+1940-1960 e 1980-1990: Desenvolvimento inicial e posterior renascimento das Redes Neurais Artificiais.
+
+1980-1990: Consolidação do Aprendizado de Máquina (Machine Learning) como um campo de estudo.
+
+2010 - Atualmente: Ascensão do Aprendizado Profundo (Deep Learning), um subcampo do ML que utiliza redes neurais com muitas camadas para resolver problemas de alta complexidade.
+
+Principais Subáreas da IA:
+
+Processamento de Linguagem Natural (PLN): Permite que as máquinas compreendam, interpretem e gerem a linguagem humana.
+
+Visão Computacional: Capacita as máquinas a "enxergar" e interpretar informações do mundo visual (imagens e vídeos).
+
+Sistemas de Recomendação: Utilizados para sugerir produtos, filmes e outros conteúdos com base no comportamento do usuário.
+
+Robótica Inteligente: Combina IA com engenharia para criar robôs que podem interagir com o ambiente físico.
+
+Reflexão: Como a IA está moldando nosso futuro?
+Assim como a Revolução da Computação transformou o mercado de trabalho ao automatizar tarefas manuais, a Revolução da IA está redefinindo o panorama profissional, impactando principalmente os empregos intelectuais. Funções que envolvem programação, criação de roteiros, elaboração de planos de aula e até composição de músicas estão sendo afetadas por ferramentas de IA.
+
+Embora a IA ainda cometa erros, sua performance melhora continuamente através do treinamento. O ciclo básico de um modelo de IA é Input (entrada de dados) -> Processamento -> Output (resultado). O desafio dos grandes modelos é que eles são treinados com bases de dados imensas e, por vezes, desatualizadas ou com vieses. Atualmente, os provedores de IA aprimoram seus sistemas através do reaprendizado com feedback humano, corrigindo e ajustando os modelos.
+
+Isso levanta uma questão fundamental: teremos menos demanda por trabalho intelectual no futuro? A tendência aponta não para uma substituição total, mas para uma colaboração, onde a IA atuará como uma ferramenta para aumentar a capacidade humana, automatizando tarefas repetitivas e permitindo que os profissionais foquem em atividades que exigem criatividade, pensamento crítico e inteligência emocional.

@@ -1,0 +1,40 @@
+Espaço e Estado de Busca em Inteligência Artificial
+Como Organizar um Problema para ser Resolvido com IA?
+Para que a Inteligência Artificial possa resolver um problema, primeiro precisamos "traduzir" esse problema para uma estrutura que ela entenda. Fazemos isso definindo o problema em termos de estados, ações e objetivos. Essa estrutura forma a base do que chamamos de "busca".
+
+Conceitos Fundamentais
+Estado (State)
+Um estado é uma "foto" do problema em um determinado momento, uma configuração específica de todas as as informações relevantes.
+
+Estado Inicial: É o ponto de partida do problema. Pode ser uma configuração aleatória ou um início pré-definido.
+
+Estado Objetivo (ou Meta): É a solução que queremos alcançar, a configuração final desejada.
+
+Ação (Action)
+Uma ação é uma operação que, ao ser executada, nos permite transitar de um estado para outro. Uma sequência de ações forma um plano ou uma solução.
+
+Espaço de Busca (Search Space)
+O espaço de busca é o conjunto de todos os estados possíveis que podem ser alcançados a partir do estado inicial. Ele representa todos os caminhos e soluções imagináveis para o problema, desde o ponto de partida até o objetivo.
+
+Analogia: Se o problema é ir do Ponto A (Estado Inicial) ao Ponto B (Estado Objetivo) em uma cidade, o espaço de busca são todas as ruas, cruzamentos e rotas possíveis que existem no mapa dessa cidade.
+
+Custo da Ação (Cost)
+Em muitos problemas, cada ação tem um custo associado. O objetivo, nesses casos, não é apenas encontrar uma solução, mas encontrar a solução com o menor custo total (o caminho mais curto, mais rápido ou mais barato).
+
+Função de Aptidão (ou Função de Avaliação)
+Para saber se estamos nos aproximando do nosso objetivo, usamos uma função de aptidão (também chamada de função heurística ou de avaliação). Essa função calcula um valor ou pontuação para um determinado estado, indicando quão "bom" ou "próximo" ele está da solução final. Ela guia o algoritmo de busca na direção certa.
+
+Resumindo a Relação entre os Conceitos
+Para reforçar a diferença, vamos usar a analogia de um GPS:
+
+Estado Inicial: Sua localização atual.
+
+Estado Objetivo: O endereço de destino.
+
+Ações: Virar à direita, virar à esquerda, seguir em frente. Cada ação te leva a uma nova rua ou cruzamento.
+
+Estado de Busca: A sua localização em qualquer ponto específico do trajeto. É uma "foto" da sua posição em uma rota.
+
+Espaço de Busca: Todas as rotas possíveis que o GPS poderia calcular para te levar do ponto A ao ponto B, incluindo os caminhos mais longos, os mais rápidos e os que evitam pedágios.
+
+Em suma, a IA resolve problemas explorando o espaço de busca, aplicando ações para mudar de um estado para outro, até que o estado objetivo seja alcançado, geralmente tentando otimizar um custo e se guiando por uma função de aptidão.

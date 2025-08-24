@@ -1,0 +1,97 @@
+TEMA 04: Teoria em Prática - Projeto de IA com Mineração de Dados
+Um projeto de Inteligência Artificial que utiliza mineração de dados combina modelos matemáticos, estatísticos e de Machine Learning para extrair insights e criar soluções preditivas. Para organizar esse processo, uma das metodologias mais utilizadas é a CRISP-DM (Cross-Industry Standard Process for Data Mining).
+
+A Metodologia CRISP-DM
+O CRISP-DM divide o projeto em seis fases sequenciais, garantindo uma abordagem estruturada e eficiente.
+
+1. Entendimento do Negócio:
+A primeira e mais crucial fase. O objetivo é definir claramente o problema a ser resolvido. No nosso exemplo, o objetivo de negócio é detectar transações de cartão de crédito fraudulentas em tempo real para reduzir perdas financeiras.
+
+2. Entendimento dos Dados:
+Nesta fase, coletamos os dados iniciais e realizamos uma análise exploratória para entender as variáveis disponíveis, sua qualidade e suas primeiras relações. É aqui que começamos a nos familiarizar com o dataset.
+
+3. Preparação dos Dados:
+Esta é, frequentemente, a fase mais demorada. Os dados brutos são transformados em um formato limpo e adequado para a modelagem. As principais tarefas incluem:
+
+Limpeza de Dados: Tratamento de dados ausentes (seja removendo-os ou preenchendo-os com valores estimados).
+
+Remoção de Outliers: Identificação e remoção de valores extremos que podem distorcer o modelo.
+
+Transformação de Dados: Conversão de dados categóricos (como "gênero" ou "tipo de estabelecimento") em valores numéricos que o algoritmo possa processar.
+
+Criação de Variáveis (Feature Engineering): Geração de novas variáveis a partir das existentes para melhorar o poder preditivo do modelo (ex: utilização_de_credito = saldo_atual / limite_do_credito).
+
+4. Modelagem:
+Com os dados preparados, selecionamos e aplicamos os algoritmos de Machine Learning. Diversos modelos podem ser treinados e testados para encontrar o que melhor se adapta ao problema.
+
+5. Avaliação:
+Nesta fase, avaliamos rigorosamente o desempenho dos modelos treinados para determinar qual deles atende melhor aos objetivos do negócio. Métricas como acurácia, precisão e recall são utilizadas para medir a eficácia do modelo em identificar fraudes corretamente.
+
+6. Implantação (Deployment):
+Após a escolha do melhor modelo, ele é integrado aos sistemas existentes da empresa (por exemplo, ao sistema de processamento de pagamentos) para que possa operar em tempo real e classificar novas transações.
+
+Exemplo de Dataset para Detecção de Fraude
+O conjunto de dados (dataset) que entra na fase de Modelagem conteria diversas características (features) sobre cada transação. A variável "classe" é o nosso rótulo, o que queremos prever.
+
+numero_do_cartao_de_credito
+
+valor_da_transacao
+
+localizacao_da_transacao
+
+tipo_de_estabelecimento
+
+hora_da_transacao
+
+dia_da_semana
+
+categoria_de_despesas
+
+idade_do_titular_do_cartao
+
+genero_do_titular_do_cartao
+
+historico_de_pagamento
+
+limite_de_credito
+
+saldo_atual
+
+numero_de_transacoes_anteriores
+
+numero_de_cartoes_suplementares
+
+valor_medio_das_transacoes
+
+numero_de_transacoes_em_outro_pais
+
+utilizacao_de_credito
+
+transacoes_suspeitas_anteriores
+
+tempo_desde_a_ultima_transacao
+
+classe (Rótulo): 1 para Fraude, 0 para Não Fraude.
+
+Algoritmos de Modelagem para Detecção de Fraude
+Abaixo estão alguns dos principais algoritmos que poderiam ser aplicados na fase de modelagem:
+
+Regressão Logística:
+Um algoritmo de classificação que calcula a probabilidade de um evento ocorrer. É usado para classificar transações como "normais" ou "fraudulentas" com base em uma função logística.
+
+Floresta Aleatória (Random Forest):
+Este método cria múltiplas "árvores de decisão" e combina seus resultados para uma classificação mais robusta e precisa. Cada árvore funciona com uma série de perguntas para chegar a uma conclusão.
+
+Exemplo de uma árvore: "A hora da transação foi depois da meia-noite?" -> "Sim". "O valor foi acima de R$ 1.000,00?" -> "Sim". "O tipo de estabelecimento é X?" -> "Sim". Resultado: Fraude.
+
+Máquina de Vetores de Suporte (SVM - Support Vector Machine):
+O SVM busca encontrar um hiperplano que melhor separa os pontos de dados das diferentes classes (transações normais vs. fraudulentas) em um espaço de múltiplas dimensões.
+
+Redes Neurais Artificiais (RNAs):
+Modelos como as Redes Neurais Profundas podem aprender representações muito complexas dos dados de transações. Elas são excelentes para identificar padrões sutis e anomalias que outros algoritmos podem não perceber.
+
+K-Nearest Neighbors (K-NN):
+Este algoritmo classifica uma nova transação com base na classe da maioria dos seus "vizinhos" mais próximos no conjunto de dados de treinamento. A lógica é simples: "diga-me com quem andas, que te direi quem és". Se os pontos de dados mais similares a uma nova transação são fraudes, ela também será classificada como fraude.
+
+Naive Bayes:
+Baseado no Teorema de Bayes (probabilidade condicional), este algoritmo calcula a probabilidade de uma transação ser fraude, dadas as suas características. Ele assume que as características são independentes entre si.

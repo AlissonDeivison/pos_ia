@@ -1,0 +1,58 @@
+TEMA 02 - FUNDAMENTOS DA INTELIGÊNCIA ARTIFICIAL
+A Inteligência Artificial (IA) é um campo multidisciplinar da Ciência da Computação, focado no desenvolvimento de sistemas e algoritmos capazes de realizar tarefas que normalmente exigem inteligência humana. Isso inclui habilidades como criatividade, tomada de decisão, aprendizado, compreensão de linguagem, percepção visual e análise preditiva.
+
+Conceitos Fundamentais da IA
+Aprendizado de Máquina (Machine Learning - ML):
+É uma subárea da IA que se baseia na ideia de que sistemas podem aprender a partir de dados, identificar padrões e tomar decisões com o mínimo de programação explícita. O modelo de ML "aprende" com exemplos. Para isso, os dados são geralmente divididos em um conjunto de treinamento (para ensinar o modelo) e um conjunto de teste (para avaliar se o modelo aprendeu corretamente).
+
+Aprendizado Supervisionado: Ocorre quando o modelo é treinado com um conjunto de dados rotulados (classificados).
+
+Aprendizado Não Supervisionado: Ocorre quando o modelo trabalha com dados não rotulados para encontrar padrões e estruturas por conta própria.
+
+Aprendizado Profundo (Deep Learning):
+É um subcampo do Machine Learning que utiliza Redes Neurais Artificiais (RNAs) com múltiplas camadas (daí o termo "profundo"). O Deep Learning é especialmente eficaz para reconhecer padrões complexos em grandes volumes de dados, sendo a tecnologia por trás dos avanços em visão computacional e processamento de linguagem natural.
+
+Redes Neurais Artificiais (RNAs):
+Inspiradas na estrutura do cérebro humano, as RNAs são algoritmos compostos por "neurônios" interconectados em camadas (entrada, intermediárias/ocultas e saída). Cada conexão possui um "peso" que é ajustado durante o treinamento. Quando um dado é inserido, a informação passa de neurônio em neurônio, sendo processada matematicamente até gerar um resultado final na camada de saída.
+
+Processamento de Linguagem Natural (PLN):
+Área da IA que capacita os computadores a compreender, interpretar, gerar e responder à linguagem humana (texto e fala). Aplicações incluem tradutores automáticos, chatbots e análise de sentimentos.
+
+Visão Computacional:
+Permite que as máquinas "enxerguem" e interpretem informações do mundo visual a partir de imagens e vídeos. A principal tecnologia por trás da visão computacional moderna são as Redes Neurais Convolucionais (CNNs), usadas em reconhecimento facial, diagnóstico por imagem e carros autônomos.
+
+Robótica Inteligente:
+Combina a IA com a engenharia robótica. Os robôs utilizam sensores para coletar dados do ambiente (entrada), e a IA processa esses dados para tomar decisões e executar ações físicas (saída).
+
+Algoritmos Genéticos:
+Inspirados na teoria da evolução de Darwin, esses algoritmos geram uma população de soluções possíveis para um problema. Através de processos de "cruzamento" e "mutação", as melhores soluções (avaliadas por uma "função de aptidão") sobrevivem e se reproduzem, evoluindo ao longo de gerações até encontrar a solução ideal.
+
+Sistemas de Recomendação:
+Utilizam o histórico de consumo e comportamento do usuário para prever e sugerir itens (produtos, filmes, músicas) que possam ser de seu interesse.
+
+Outros Conceitos Importantes:
+
+IA Conversacional: Tecnologia por trás de chatbots e assistentes virtuais (Siri, Alexa).
+
+Mineração de Dados (Data Mining): Uso de algoritmos estatísticos para descobrir padrões e extrair informações úteis de grandes bancos de dados.
+
+Reconhecimento de Padrões: Uma capacidade fundamental da IA para identificar tendências e regularidades nos dados.
+
+IA Explicável (XAI): Campo que busca desenvolver sistemas de IA cujas decisões possam ser facilmente compreendidas por humanos, combatendo o problema da "caixa-preta".
+
+Agentes Inteligentes: Entidades autônomas que percebem seu ambiente através de sensores e agem sobre ele para atingir objetivos específicos.
+
+Raciocínio Automatizado: Campo da IA que utiliza a programação lógica para realizar inferências e resolver problemas de forma autônoma.
+
+Ética em Inteligência Artificial
+A aplicação da IA levanta questões éticas cruciais que precisam ser abordadas para um desenvolvimento responsável da tecnologia.
+
+Viés Algorítmico: Os modelos de IA aprendem com os dados que recebem. Se esses dados contêm vieses humanos (raciais, de gênero, sociais), o algoritmo irá aprender e perpetuar esses preconceitos em suas decisões, podendo levar a resultados discriminatórios.
+
+Privacidade dos Dados: O treinamento de IAs exige grandes volumes de dados, o que gera preocupações sobre como essas informações são coletadas, armazenadas e utilizadas. É essencial garantir o consentimento e a proteção dos dados dos indivíduos.
+
+Responsabilidade e Transparência: Quando um sistema de IA falha, quem é o responsável? A responsabilidade final deve ser atribuída aos humanos (desenvolvedores, operadores), e não à máquina. Além disso, a falta de transparência sobre como um modelo toma suas decisões (o problema da "caixa-preta") é um risco em áreas críticas como saúde e justiça.
+
+Impacto no Emprego: A automação de tarefas intelectuais pode levar à substituição de empregos, exigindo uma ampla requalificação da força de trabalho e a criação de políticas públicas para mitigar o impacto social.
+
+Ética na Pesquisa: Pesquisadores de IA têm a responsabilidade de conduzir seus trabalhos de forma íntegra, sem falsificar dados ou resultados, e de considerar as potenciais consequências sociais e de segurança de suas criações. A IA Responsável é o framework que orienta o desenvolvimento de soluções éticas, justas e seguras.

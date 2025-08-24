@@ -1,0 +1,45 @@
+TEMA 03: INTERAÇÃO COM IA E SEUS PROCESSOS INTERNOS
+A Inteligência Artificial já faz parte do nosso cotidiano, presente em inúmeras ferramentas e serviços. Para que a nossa interação com essas tecnologias seja eficaz, ocorrem processos de alta complexidade "por baixo dos panos". Compreender como a IA processa informações do mundo real, como imagens e textos, é fundamental para entender seu funcionamento.
+
+Vamos explorar os processos internos de duas das áreas mais importantes da IA: a Visão Computacional e o Processamento de Linguagem Natural (PLN).
+
+1. Visão Computacional: Como a IA "Enxerga"
+Um exemplo prático é o uso da IA para diagnósticos médicos a partir de exames de imagem. Para um algoritmo "ler" uma radiografia, ele não a vê como uma imagem, mas como dados numéricos.
+
+O Processo de Análise de Imagem:
+
+Padronização dos Dados: Primeiramente, todas as imagens de treinamento precisam ser ajustadas para um formato padrão (mesmo tamanho, escala de cores, etc.). Isso garante consistência para o modelo.
+
+Conversão em Dados Numéricos: Uma imagem digital é, em essência, uma matriz de pixels. Cada pixel possui um valor numérico que representa sua cor e intensidade. A máquina converte essa matriz de pixels em um longo vetor de números (uma "linha reta" de dados). Uma única imagem pode se transformar em dezenas ou centenas de vetores numéricos.
+
+Treinamento do Modelo: O modelo é treinado com dezenas de milhares de imagens já diagnosticadas por especialistas. Ele aprende a associar os padrões numéricos dos vetores com os diagnósticos correspondentes.
+
+O Algoritmo em Ação: Rede Neural Convolucional (CNN): O algoritmo mais utilizado para essa tarefa é a Rede Neural Convolucional. Diferente de outras redes, a CNN é projetada especificamente para reconhecer padrões espaciais, como formas, texturas e bordas, diretamente dos pixels da imagem, tornando-a extremamente eficaz para tarefas de visão computacional.
+
+2. Processamento de Linguagem Natural (PLN): Como a IA "Entende" a Linguagem
+Modelos de linguagem modernos, como os que alimentam chatbots e assistentes virtuais, passam por um sofisticado processo de treinamento para aprender a conversar, responder perguntas e gerar textos.
+
+O Processo de Treinamento de um Modelo de Linguagem (LLM):
+
+A abordagem mais moderna é o Aprendizado por Reforço com Feedback Humano (RLHF), que ocorre em etapas:
+
+Fine-Tuning Supervisionado (SFT - Supervised Fine-Tuning):
+
+Nesta fase inicial, o modelo é treinado com um conjunto de dados de alta qualidade, contendo exemplos de "prompts" (instruções de entrada) e as "respostas esperadas" (saídas ideais). O objetivo é ensinar ao modelo o formato e o estilo de uma conversa ou resposta útil.
+
+Treinamento do Modelo de Recompensa (RM - Reward Model):
+
+Para uma mesma instrução (prompt), o modelo SFT gera diversas respostas.
+
+Avaliadores humanos ordenam essas respostas da melhor para a pior.
+
+Esses dados de classificação são usados para treinar um segundo modelo, o Modelo de Recompensa, cujo objetivo é aprender a prever qual resposta um humano preferiria.
+
+Otimização por Política Proximal (PPO - Proximal Policy Optimization):
+
+Nesta etapa final, o modelo de linguagem original (SFT) é otimizado usando o Modelo de Recompensa como um guia.
+
+O algoritmo de PPO ajusta a política do modelo (a regra interna que ele usa para gerar respostas) para que ele produza resultados que maximizem a pontuação dada pelo Modelo de Recompensa. Em outras palavras, ele aprende a gerar as respostas mais "adequadas" e preferidas pelos humanos.
+
+Aplicação Prática de PLN: Análise de Sentimento
+Uma aplicação comum do PLN é a Análise de Sentimento. O objetivo é realizar uma classificação textual para identificar a emoção ou opinião expressa em um texto (positiva, negativa ou neutra). Para isso, o modelo é treinado a reconhecer o "peso" emocional de palavras e o contexto em que são usadas, permitindo que ele analise comentários de clientes, posts em redes sociais e muito mais.

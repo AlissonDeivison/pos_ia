@@ -1,0 +1,64 @@
+Redes Neurais Artificiais (RNAs)
+As Redes Neurais Artificiais são um dos modelos mais poderosos do Machine Learning, inspiradas na estrutura e no funcionamento do cérebro humano. Seu processamento é feito por neurônios densamente interligados, organizados em camadas.
+
+Estrutura de uma Rede Neural
+Uma RNA é tipicamente composta por três tipos de camadas, o que forma a base do paradigma conexionista:
+
+Camada de Entrada (Input Layer): Recebe os dados brutos do problema (as features do dataset). Cada neurônio de entrada representa uma característica.
+
+Camadas Intermediárias ou Ocultas (Hidden Layers): Onde a maior parte do processamento ocorre. Os neurônios da camada de entrada são totalmente conectados com os da primeira camada oculta, que por sua vez se conectam com a próxima, e assim por diante. É a presença dessas camadas que permite à rede aprender padrões complexos e fazer um mapeamento não linear entre as entradas e as saídas.
+
+Camada de Saída (Output Layer): Produz o resultado final da rede (uma classificação, um valor numérico, etc.).
+
+Aplicações das Redes Neurais Artificiais
+RNAs são utilizadas para resolver problemas complexos em diversas áreas:
+
+Visão Computacional: Análise de imagens de satélite, reconhecimento de faces e identificação de anomalias ou patologias em exames médicos.
+
+Processamento de Linguagem Natural (PLN): Classificação de padrões de escrita e reconhecimento de fala.
+
+Controle e Automação: Controle automatizado de equipamentos, como nos sistemas de carros autônomos.
+
+O Perceptron: O Primeiro Neurônio Artificial
+O Perceptron foi o primeiro modelo de neurônio artificial criado, capaz de resolver problemas linearmente separáveis. Um único Perceptron não consegue resolver problemas complexos (não lineares), mas a combinação de diversos neurônios em múltiplas camadas, como na Rede Multilayer Perceptron (MLP), permite a resolução de praticamente qualquer tipo de problema.
+
+Como um Neurônio Processa a Informação?
+Entradas e Pesos: Cada valor de entrada é multiplicado pelo "peso" de sua respectiva conexão. O peso representa a importância daquela entrada para o neurônio.
+
+entradas = [1, 2, 3, 4]
+
+pesos = [0.3, 0.4, 0.5, 0.6]
+
+Soma Ponderada: Todos os resultados das multiplicações são somados: (1*0.3) + (2*0.4) + (3*0.5) + (4*0.6) = 0.3 + 0.8 + 1.5 + 2.4 = 5.0.
+
+Função de Ativação: O resultado da soma é passado por uma Função de Ativação, que decide qual será o sinal de saída do neurônio. Essa saída é então enviada para a próxima camada.
+
+Observação importante: Para que uma Rede Neural funcione corretamente, os dados de entrada devem ser numéricos e, geralmente, escalados para um intervalo padrão, como entre 0 e 1.
+
+Como uma Rede Neural Aprende? O Algoritmo de Backpropagation
+A "mágica" do aprendizado acontece através de um algoritmo chamado Backpropagation (Retropropagação). O objetivo é ajustar os pesos das conexões para minimizar o erro da rede.
+
+Inicialização: Os pesos de todas as conexões da rede são iniciados com valores aleatórios.
+
+Forward Pass (Passagem para Frente): Um conjunto de dados de treino (onde x e a saída esperada f(x) são conhecidos) é inserido na camada de entrada. Os dados passam por toda a rede, camada por camada, até a camada de saída gerar um resultado (uma previsão).
+
+Cálculo do Erro: A previsão gerada pela rede é comparada com o resultado real esperado. A diferença entre eles é o erro.
+
+Exemplo: Para uma transação que é fraude (saída esperada = 1), se a rede previu 0, o erro é 1 - 0 = 1. Se ela previu 1, o erro é 0 e os pesos não precisam de um ajuste tão grande.
+
+Backward Pass (Retropropagação): O erro calculado é propagado de volta pela rede, da camada de saída para a de entrada.
+
+Ajuste dos Pesos: Conforme o erro é retropropagado, o algoritmo ajusta o valor de cada peso para tentar reduzir o erro. Isso é feito usando um método matemático chamado Gradiente Descendente, que envolve o cálculo de derivadas para encontrar a direção em que o erro diminui mais rapidamente.
+
+Este ciclo (passos 2 a 5) é repetido milhares ou milhões de vezes com todos os dados do conjunto de treinamento, até que os pesos da rede estejam otimizados para fazer as previsões mais precisas possíveis.
+
+Funções de Ativação Comuns
+A função de ativação determina se um neurônio deve ser "ativado" ou não. Existem várias, cada uma com um comportamento diferente:
+
+Sigmoide: Transforma qualquer entrada em um valor entre 0 e 1. A fórmula é y(x) = 1 / (1 + e^-x). Se a entrada x for um valor muito baixo, a saída se aproxima de 0; se for muito alta, se aproxima de 1.
+
+ReLU (Rectified Linear Unit): É a mais popular hoje em dia. Se a entrada x for menor que zero, a saída é 0. Se for maior que zero, a saída é o próprio x. É computacionalmente muito eficiente.
+
+Softplus: Similar à ReLU, mas com uma curva suave. A ativação cresce exponencialmente: quanto maior o x, maior a saída.
+
+ELU (Exponential Linear Unit): Uma variação da ReLU que permite valores negativos, o que pode ajudar a rede a aprender mais rápido em certas situações.

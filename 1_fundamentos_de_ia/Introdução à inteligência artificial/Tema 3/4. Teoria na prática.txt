@@ -1,0 +1,62 @@
+Modelo de Previsão de Preços de Imóveis com Redes Neurais
+Cenário: Um corretor de imóveis opera em um mercado competitivo e precisa de previsões de preços precisas para atender seus clientes. O objetivo é substituir a estimativa humana, que pode ser subjetiva, por um modelo de IA treinado para ser mais rápido, consistente e preciso.
+
+Este é um clássico problema de regressão, pois o objetivo é prever um valor numérico contínuo (o preço do imóvel).
+
+Norte para a Resolução: As 8 Etapas do Projeto
+1. Coleta de Dados:
+O primeiro passo é construir um dataset robusto. Precisamos coletar dados de centenas ou milhares de imóveis que já foram vendidos. As características (atributos) a serem coletadas devem ter relação com o valor do imóvel. O "rótulo" ou "variável-alvo" será o preço final de venda.
+
+Exemplos de Atributos: Tamanho (m²), número de quartos, número de banheiros, idade do imóvel, localização (bairro, CEP), tipo de propriedade (casa, apartamento), presença de garagem, etc.
+
+Rótulo (Alvo): Preco_de_Venda.
+
+2. Pré-processamento de Dados:
+Esta é uma das fases mais críticas. O objetivo é limpar e transformar os dados brutos em um formato que a rede neural possa utilizar.
+
+Limpeza: Tratar dados ausentes (ex: imóveis sem a idade registrada) e remover outliers (ex: uma mansão com preço muito fora da curva que possa distorcer o aprendizado).
+
+Transformação: Redes neurais só trabalham com números. Características categóricas, como "bairro", precisam ser convertidas em formato numérico (usando técnicas como One-Hot Encoding).
+
+Normalização/Escalonamento: Todas as características numéricas devem ser colocadas na mesma escala (geralmente entre 0 e 1). Isso evita que o modelo dê mais importância ao "tamanho (m²)" do que ao "número de quartos" só porque seus valores absolutos são maiores.
+
+3. Divisão dos Dados:
+O dataset é dividido em dois ou três conjuntos para garantir que o modelo seja avaliado de forma justa.
+
+Conjunto de Treino (aprox. 70%): Usado para ensinar o modelo, mostrando os dados e os preços corretos.
+
+Conjunto de Teste (aprox. 30%): Usado apenas no final para avaliar o desempenho do modelo em dados que ele nunca viu, simulando a vida real.
+
+Validação Cruzada (Cross-Validation): Para evitar o overfitting, podemos usar esta técnica durante o treinamento. Em vez de uma única divisão, o modelo é treinado e validado várias vezes em diferentes subconjuntos dos dados, garantindo uma avaliação de desempenho mais robusta.
+
+4. Arquitetura da Rede Neural:
+Aqui, definimos a estrutura do nosso modelo.
+
+Camada de Entrada: Terá um neurônio para cada característica (atributo) do nosso dataset (tamanho, quartos, etc.).
+
+Camadas Ocultas (Intermediárias): É a parte central da rede, onde os padrões são aprendidos. A escolha do número de camadas e de neurônios é experimental. Começar com duas camadas ocultas é uma boa prática. Muitos neurônios podem levar ao overfitting.
+
+Camada de Saída: Terá apenas um neurônio, pois nossa saída é um único valor (o preço previsto). A função de ativação para este neurônio será linear (ou nenhuma), pois queremos prever um valor contínuo, não uma classificação binária.
+
+5. Treinamento do Modelo:
+Nesta fase, o modelo "aprende". O conjunto de dados de treino é alimentado na rede neural. Utilizando o algoritmo de Backpropagation e um otimizador (como o "Adam"), a rede ajusta seus pesos internos repetidamente para minimizar a diferença entre os preços que ela prevê e os preços reais do dataset.
+
+6. Avaliação do Modelo:
+Após o treinamento, avaliamos a qualidade do modelo usando o conjunto de teste. Para um problema de regressão, usamos métricas específicas:
+
+Erro Médio Absoluto (MAE): Informa, em média, qual a diferença (em reais) entre o preço previsto e o preço real.
+
+Raiz do Erro Quadrático Médio (RMSE): Similar ao MAE, mas penaliza mais os erros grandes.
+
+7. Otimização e Ajustes:
+Com base nos resultados da avaliação, o modelo raramente é perfeito na primeira tentativa. Esta é uma fase iterativa onde podemos:
+
+Ajustar a arquitetura da rede (mudar o número de camadas ou neurônios).
+
+Alterar hiperparâmetros do treinamento (como a taxa de aprendizado).
+
+Voltar à etapa de pré-processamento para refinar as características (feature engineering).
+O ciclo se repete até que o modelo atinja uma precisão aceitável para o negócio.
+
+8. Implantação (Deployment):
+Finalmente, com o modelo treinado e otimizado, ele é colocado em produção. Ele pode ser integrado a uma aplicação web ou um sistema interno onde o corretor pode inserir as características de um novo imóvel e receber a previsão de preço instantaneamente, usando a tecnologia como uma poderosa ferramenta de apoio à decisão.
